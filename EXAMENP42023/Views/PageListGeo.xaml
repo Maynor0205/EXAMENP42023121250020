@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EXAMENP42023.Views.PageListGeo">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <CollectionView x:Name="listlocal"
+                            Margin="20"
+                            SelectionMode="Single"
+                            SelectionChanged="listlocal_SelectionChanged"
+                            SelectedItem="listlocal">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                                       ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding descripcion_corta}"/>
+                            <Label Text="{Binding latitud}"/>
+                            <Label Text="{Binding longitud}"/>
+                            
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+            
+            <Button 
+                    x:Name="Btnactualizar"
+                    Text="Actualizar"
+                    TextColor="Black"
+                    BorderWidth="2"
+                    BorderColor="White"
+                    Margin="10,0,10,0"
+                    FontSize="18"
+                    Clicked="Btnactualizar_Clicked"
+                    HeightRequest="40"
+                    CornerRadius="60"
+                    BackgroundColor="White"/>
+            <Button 
+                    x:Name="Btneliminar"
+                    Text="ELIMINAR"
+                    TextColor="Black"
+                    BorderWidth="2"
+                    BorderColor="White"
+                    Margin="10,0,10,0"
+                    FontSize="18"
+                    Clicked="Btneliminar_Clicked"
+                    HeightRequest="40"
+                    CornerRadius="60"
+                    BackgroundColor="White"/>
+            <Button 
+                    x:Name="Btnvermapa"
+                    Text="VER"
+                    TextColor="Black"
+                    BorderWidth="2"
+                    BorderColor="White"
+                    Margin="10,0,10,0"
+                    FontSize="18"
+                    Clicked="Btnvermapa_Clicked"
+                    HeightRequest="40"
+                    CornerRadius="60"
+                    BackgroundColor="White"/>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

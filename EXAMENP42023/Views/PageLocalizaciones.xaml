@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EXAMENP42023.Views.PageLocalizaciones"
+             xmlns:local="clr-namespace:EXAMENP42023"
+             BackgroundImageSource="fondo.jpg"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout>
+        
+        <Grid RowSpacing="10" RowDefinitions="Auto,Auto,Auto,Auto">
+                <StackLayout Grid.Row="1">
+                    <Label Text="BIENVENIDO"
+                       FontSize="30"
+                       TextColor="white"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"/>
+                    <Frame BorderColor="White"
+                       BackgroundColor="Transparent"
+                       Margin="15"
+                       Padding="0"
+                       CornerRadius="20">
+                        <Image Source="logo.jpg" WidthRequest="140" HeightRequest="140"/>
+                    </Frame>
+                    
+                <Label 
+                    Text="Latitud"
+                       FontSize="15"
+                       TextColor="white"
+                       HorizontalTextAlignment="Center"
+                    Margin="1"
+                       />
+                    
+                <Frame 
+                       BorderColor="White"
+                       BackgroundColor="Transparent"
+                       Margin="1"
+                       Padding="0"
+                       CornerRadius="50">
+                    <Frame 
+                       BorderColor="White"
+                       BackgroundColor="Transparent"
+                       Margin="11"
+                       Padding="25,0,25,0"
+                       HeightRequest="50"
+                       CornerRadius="50">
+                        <Entry x:Name="latitud" 
+                                  TextColor="White" 
+                                 FontSize="15" 
+                                 Placeholder="Latitud Actual" 
+                                 PlaceholderColor="White"
+                                 Keyboard="Numeric"
+                                IsEnabled="False"/>
+                        </Frame>
+                    </Frame>
+
+                <Label 
+                    Text="Longitud"
+                       FontSize="15"
+                       TextColor="white"
+                       HorizontalTextAlignment="Center"
+                    Margin="1"
+                       />
+
+                <Frame BorderColor="White"
+                       BackgroundColor="Transparent"
+                       Margin="10"
+                       Padding="0"
+                       CornerRadius="40">
+                        <Frame 
+                       BorderColor="White"
+                       BackgroundColor="Transparent"
+                       Margin="11"
+                       Padding="25,0,25,0"
+                       HeightRequest="50"
+                       CornerRadius="50">
+                            <Entry x:Name="longitud" 
+                               TextColor="White" 
+                               FontSize="15" 
+                               Placeholder="Longitud Actual" 
+                               PlaceholderColor="White"
+                               Keyboard="Numeric"
+                               IsEnabled="False"/>
+                        </Frame>
+                    </Frame>
+                    
+                    <Frame BorderColor="White"
+                       BackgroundColor="Transparent"
+                       Margin="10"
+                       Padding="0"
+                       CornerRadius="40">
+                        <Frame 
+                       BorderColor="White"
+                       BackgroundColor="Transparent"
+                       Margin="11"
+                       Padding="25,0,25,0"
+                       HeightRequest="40"
+                       CornerRadius="50">
+                            <Entry x:Name="DescripcionLarga" 
+                               TextColor="White" 
+                               FontSize="15" 
+                               Placeholder="Describa la ubicación" 
+                               PlaceholderColor="White"
+                               Keyboard="Text"/>
+                        </Frame>
+                    </Frame>
+                    <Frame BorderColor="White"
+                       BackgroundColor="Transparent"
+                       Margin="10"
+                       Padding="0"
+                       CornerRadius="40">
+                        <Frame 
+                       BorderColor="White"
+                       BackgroundColor="Transparent"
+                       Margin="11"
+                       Padding="25,0,25,0"
+                       HeightRequest="40"
+                       CornerRadius="50">
+                            <Entry x:Name="DescripcionCorta" 
+                               TextColor="White" 
+                               FontSize="15" 
+                               Placeholder="Descripción Corta" 
+                               PlaceholderColor="White"
+                               Keyboard="Text"/>
+                        </Frame>
+                    </Frame>
+                    <Button 
+                    x:Name="Btnguardar"
+                    Text="GUARDAR"
+                    TextColor="Black"
+                    BorderWidth="2"
+                    BorderColor="White"
+                    Margin="10,0,10,0"
+                    FontSize="18"
+                    Clicked="btnguardar_Clicked"
+                    HeightRequest="40"
+                    CornerRadius="60"
+                    BackgroundColor="White"/>
+                    <Button 
+                    x:Name="Btnver"
+                    Text=" VER UBICACIONES"
+                    TextColor="Black"
+                    BorderWidth="2"
+                    BorderColor="White"
+                    Margin="10,0,10,0"
+                    FontSize="18"
+                    Clicked="btnver_Clicked"
+                    HeightRequest="40"
+                    CornerRadius="60"
+                    BackgroundColor="White"/>
+
+
+                </StackLayout>
+
+            </Grid>
+
+        </StackLayout>
+   
+</ContentPage>
